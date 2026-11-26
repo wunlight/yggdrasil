@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { VIEW_WRAPPER_PADDING, VIEW_WRAPPER_WIDTH } from "~/constants/preset";
+import { FEATURED_PROJECTS } from "~/constants/projects";
 </script>
 
 <template>
@@ -11,9 +12,12 @@ import { VIEW_WRAPPER_PADDING, VIEW_WRAPPER_WIDTH } from "~/constants/preset";
       03 | Featured Projects
     </p>
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
+      <ProjectCard
+        v-for="item in FEATURED_PROJECTS"
+        :key="item.title"
+        :title="item.title"
+        :description="item.description"
+      />
     </div>
   </div>
 </template>

@@ -1,16 +1,23 @@
 <script setup lang="ts">
-type Severity = "primary" | "secondary" | "success" | "warn" | "danger" | "plain";
+const SEVERITY = ["primary", "secondary", "success", "warn", "danger", "plain"] as const;
+type Severity = (typeof SEVERITY)[number];
 
 const props = withDefaults(
   defineProps<{
+    title: string;
+    description: string;
     severity?: Severity;
   }>(),
-  {
-    severity: "primary",
-  },
+  {},
 );
 
-const shadowClass = computed(() => `nb-shadow-${props.severity}`);
+const severity = ref<Severity>(props.severity ?? "plain");
+
+const shadowClass = computed(() => `nb-shadow-${severity.value}`);
+
+onMounted(() => {
+  if (!props.severity) severity.value = SEVERITY[Math.floor(Math.random() * 6)]!;
+});
 </script>
 
 <template>
@@ -22,12 +29,8 @@ const shadowClass = computed(() => `nb-shadow-${props.severity}`);
       <img alt="image" class="size-full object-cover" />
     </div>
     <div class="p-4">
-      <h1 class="font-medium text-2xl">Title Goes Here</h1>
-      <p class="line-clamp-3 text-zinc-300">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis autem, quod facere nisi
-        vero officiis eveniet fugiat delectus! Hic et pariatur officia quas eum rem sint quos ea
-        itaque quae.
-      </p>
+      <h1 class="line-clamp-1 font-medium text-2xl">{{ title }}</h1>
+      <p class="line-clamp-3 text-zinc-300">{{ description }}</p>
     </div>
     <slot name="actions" />
   </div>
