@@ -16,13 +16,9 @@ import { SKILLS } from "~/constants/skills";
         v-for="item in SKILLS"
         :key="item.name"
         :title="item.name"
-        class="group relative p-6 hover:bg-white border rounded-lg hover:scale-110 transition-all duration-200"
+        class="relative p-6 hover:bg-white border-3 rounded-lg hover:scale-110 transition-all duration-200"
       >
-        <img
-          :src="item.src"
-          :alt="item.name"
-          class="size-16 pointer-fine:grayscale-100 pointer-fine:group-hover:grayscale-0"
-        />
+        <img :src="item.src" :alt="item.name" class="size-16" />
         <UiBadge
           v-if="item.exploring"
           label="Exploring"
