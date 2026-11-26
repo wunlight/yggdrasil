@@ -6,6 +6,7 @@ const props = withDefaults(
   defineProps<{
     title: string;
     description: string;
+    thumbnail?: string;
     severity?: Severity;
   }>(),
   {},
@@ -23,10 +24,11 @@ onMounted(() => {
 <template>
   <div class="relative flex flex-col">
     <div
-      class="aspect-video bg-zinc-800 border-3 border-black rounded-lg overflow-clip"
+      class="aspect-video grid place-content-center bg-zinc-800 border-3 border-black rounded-lg overflow-clip"
       :class="[shadowClass]"
     >
-      <img alt="image" class="size-full object-cover" />
+      <img v-if="thumbnail" alt="image" class="size-full object-cover" />
+      <span v-else class="icon-[tabler--photo-off] size-10" />
     </div>
     <div class="p-4">
       <h1 class="line-clamp-1 font-medium text-2xl">{{ title }}</h1>
