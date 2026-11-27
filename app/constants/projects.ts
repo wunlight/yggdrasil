@@ -34,7 +34,7 @@ export const PROJECTS: Project[] = [
     id: "001-datis",
     title: "DATIS - Company Profile",
     thumbnail: "",
-    techStacks: ["Vue 3", "Express.js"],
+    techStacks: ["Nuxt", "Express.js"],
     links: {
       live: "https://datis.co.id/",
     },
@@ -43,7 +43,7 @@ export const PROJECTS: Project[] = [
     id: "002-eragon",
     title: "Eragon - Company Profile",
     thumbnail: "",
-    techStacks: ["Vue 3", "Express.js"],
+    techStacks: ["Nuxt", "Express.js"],
     links: {
       live: "https://www.eragon.co.id/",
     },
