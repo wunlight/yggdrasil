@@ -10,16 +10,7 @@ import { PROJECTS } from "~/constants/projects";
     style="border-top-style: dashed"
   >
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-      <ProjectCard v-for="item in PROJECTS" :key="item.title" :data="item">
-        <template #stacks>
-          <UiBadge
-            v-for="(stack, idx) in item.techStacks"
-            :key="`${stack}-${idx}`"
-            :label="stack"
-            size="sm"
-          />
-        </template>
-      </ProjectCard>
+      <ProjectCard v-for="item in PROJECTS" :key="item.title" :data="item" />
     </div>
   </div>
 </template>

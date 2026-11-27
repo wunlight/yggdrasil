@@ -59,7 +59,7 @@ const scrollToTop = () => {
           :raised="false"
           @click="navTo('/projects')"
         />
-        <UiButton label="Blog" severity="plain" :outlined="false" :raised="false" disabled />
+        <!-- <UiButton label="Blog" severity="plain" :outlined="false" :raised="false" /> -->
         <UiButton label="Contact" severity="plain" :outlined="false" :raised="false" />
         <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" @click="showMenu = false">
           <UiButton label="My Resume" severity="success" />

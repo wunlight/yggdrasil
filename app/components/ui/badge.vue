@@ -24,12 +24,12 @@ const props = withDefaults(
 );
 
 const SEVERITY_CLASSES: Record<Severity, string> = {
-  primary: "bg-cyan-400",
-  secondary: "bg-purple-400",
-  success: "bg-lime-400",
-  warn: "bg-amber-400",
-  danger: "bg-red-400",
-  plain: "bg-white",
+  primary: "text-black bg-cyan-400",
+  secondary: "text-black bg-purple-400",
+  success: "text-black bg-lime-400",
+  warn: "text-black bg-amber-400",
+  danger: "text-black bg-red-400",
+  plain: "text-black bg-white",
 };
 
 const SIZE_CLASSES: Record<Size, string> = {
@@ -49,7 +49,7 @@ const SIZE_CLASSES: Record<Size, string> = {
         'px-1.5': label,
         'flex-row-reverse': iconPos === 'right',
         'aspect-square overflow-hidden': squared,
-        'border-2': outlined,
+        'border-2 border-black': outlined,
         'nb-shadow': raised,
       },
     ]"
