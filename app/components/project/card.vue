@@ -27,7 +27,13 @@ const shadowClass = computed(() => `nb-shadow-${props.severity}`);
     <div class="relative z-0 flex flex-col gap-1.5 p-3">
       <h1 class="line-clamp-1 font-medium text-2xl">{{ data.title }}</h1>
       <div class="flex flex-wrap gap-3">
-        <slot name="stacks" />
+        <UiBadge
+          v-for="(item, idx) in data.techStacks"
+          :key="`${item}-${idx}`"
+          :label="item"
+          severity="danger"
+          size="sm"
+        />
       </div>
     </div>
     <div class="absolute right-3 top-3 z-1 hidden group-hover:flex gap-3">
