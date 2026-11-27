@@ -21,8 +21,13 @@ const shadowClass = computed(() => `nb-shadow-${props.severity}`);
       class="relative z-0 aspect-video grid place-content-center bg-zinc-800 border-3 border-black rounded-lg overflow-clip"
       :class="[shadowClass]"
     >
-      <img v-if="data.thumbnail" :alt="data.title" class="size-full object-cover" />
-      <span v-else class="icon-[tabler--photo-off] size-10" />
+      <img
+        v-if="data.thumbnail"
+        :src="data.thumbnail"
+        :alt="data.title"
+        class="aspect-video h-full"
+      />
+      <span v-else class="icon-[tabler--photo-off] size-10 text-white" />
     </div>
     <div class="relative z-0 flex flex-col gap-1.5 p-3">
       <h1 class="line-clamp-1 font-medium text-2xl">{{ data.title }}</h1>

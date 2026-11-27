@@ -1,9 +1,15 @@
+import amigo from "~/assets/images/projects/amigo.png";
+import apilogik from "~/assets/images/projects/apilogik.png";
+import datis from "~/assets/images/projects/datis.png";
+import eragon from "~/assets/images/projects/eragon.png";
+import heimdall from "~/assets/images/projects/heimdall.png";
+
 export const PROJECTS: Project[] = [
   {
     id: "005-amigo",
     title: "Amigo Workshop - POS",
-    thumbnail: "",
-    techStacks: ["Vue 3", "Go"],
+    thumbnail: amigo,
+    techStacks: ["Vue 3", "TypeScript", "Go"],
     links: {
       github: "https://github.com/wunlight/amigo-client",
     },
@@ -12,7 +18,7 @@ export const PROJECTS: Project[] = [
   {
     id: "006-heimdall",
     title: "Heimdall - Spatial Monitoring Prototype",
-    thumbnail: "",
+    thumbnail: heimdall,
     techStacks: ["Vue 3", "Three.js", "Leaflet"],
     links: {
       live: "https://heimdall-prototype.vercel.app/",
@@ -23,7 +29,7 @@ export const PROJECTS: Project[] = [
   {
     id: "003-apilogik",
     title: "Apilogik Watch - Realtime Fire Panel Monitoring ",
-    thumbnail: "",
+    thumbnail: apilogik,
     techStacks: ["Vue 3", "Leaflet", "TypeScript"],
     links: {
       live: "https://apilogik.com/",
@@ -33,7 +39,7 @@ export const PROJECTS: Project[] = [
   {
     id: "001-datis",
     title: "DATIS - Company Profile",
-    thumbnail: "",
+    thumbnail: datis,
     techStacks: ["Nuxt", "Express.js"],
     links: {
       live: "https://datis.co.id/",
@@ -42,7 +48,7 @@ export const PROJECTS: Project[] = [
   {
     id: "002-eragon",
     title: "Eragon - Company Profile",
-    thumbnail: "",
+    thumbnail: eragon,
     techStacks: ["Nuxt", "Express.js"],
     links: {
       live: "https://www.eragon.co.id/",
