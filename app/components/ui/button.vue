@@ -25,12 +25,12 @@ const props = withDefaults(
 );
 
 const SEVERITY_CLASSES: Record<Severity, string> = {
-  primary: "bg-cyan-400 hover:bg-cyan-500",
-  secondary: "bg-purple-400 hover:bg-purple-500",
-  success: "bg-lime-400 hover:bg-lime-500",
-  warn: "bg-amber-400 hover:bg-amber-500",
-  danger: "bg-red-400 hover:bg-red-500",
-  plain: "bg-white hover:bg-zinc-200",
+  primary: "text-black bg-cyan-400 hover:bg-cyan-500",
+  secondary: "text-black bg-purple-400 hover:bg-purple-500",
+  success: "text-black bg-lime-400 hover:bg-lime-500",
+  warn: "text-black bg-amber-400 hover:bg-amber-500",
+  danger: "text-black bg-red-400 hover:bg-red-500",
+  plain: "text-black bg-white hover:bg-zinc-200",
 };
 
 const SIZE_CLASSES: Record<Size, string> = {
@@ -50,7 +50,7 @@ const SIZE_CLASSES: Record<Size, string> = {
         'px-3': label,
         'flex-row-reverse': iconPos === 'right',
         'aspect-square overflow-hidden': squared,
-        'border-2': outlined,
+        'border-2 border-black': outlined,
         'nb-shadow': raised,
         'pointer-events-none opacity-50': disabled,
       },

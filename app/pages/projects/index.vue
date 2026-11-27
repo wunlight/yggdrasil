@@ -1,3 +1,4 @@
 <template>
-  <div>Projects</div>
+  <ProjectHero />
+  <ProjectList />
 </template>

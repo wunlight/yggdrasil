@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { VIEW_WRAPPER_PADDING, VIEW_WRAPPER_WIDTH } from "~/constants/preset";
-import { FEATURED_PROJECTS } from "~/constants/projects";
+import { PROJECTS } from "~/constants/projects";
 </script>
 
 <template>
@@ -13,10 +13,9 @@ import { FEATURED_PROJECTS } from "~/constants/projects";
     </p>
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
       <ProjectCard
-        v-for="item in FEATURED_PROJECTS"
+        v-for="item in PROJECTS.filter((p) => p.featured)"
         :key="item.title"
-        :title="item.title"
-        :description="item.description"
+        :data="item"
       />
     </div>
     <UiButton
