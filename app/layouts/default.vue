@@ -1,8 +1,14 @@
 <script setup lang="ts">
 const showMenu = ref(false);
+const showContact = ref(false);
 
 const navTo = (path: string) => {
   navigateTo(path);
+  showMenu.value = false;
+};
+
+const openContact = () => {
+  showContact.value = true;
   showMenu.value = false;
 };
 
@@ -60,13 +66,21 @@ const scrollToTop = () => {
           @click="navTo('/projects')"
         />
         <!-- <UiButton label="Blog" severity="plain" :outlined="false" :raised="false" /> -->
-        <UiButton label="Contact" severity="plain" :outlined="false" :raised="false" />
+        <UiButton
+          label="Contact"
+          severity="plain"
+          :outlined="false"
+          :raised="false"
+          @click="openContact"
+        />
         <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" @click="showMenu = false">
           <UiButton label="My Resume" severity="success" />
         </a>
       </div>
     </div>
   </Transition>
+
+  <ContactDialog v-model="showContact" />
 
   <div
     class="fixed right-6 xl:right-[max(0px,calc((100vw-1200px)/2))] bottom-6 z-30 opacity-0 invisible translate-y-4 transition-all duration-200"

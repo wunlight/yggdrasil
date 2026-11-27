@@ -59,7 +59,16 @@ import { VIEW_WRAPPER_WIDTH } from "~/constants/preset";
           </p>
         </div>
         <div class="flex gap-3">
-          <UiButton label="Let's Talk" icon="icon-[tabler--phone]" severity="success" />
+          <ContactDialog>
+            <template #trigger="{ open }">
+              <UiButton
+                label="Let's Talk"
+                icon="icon-[tabler--phone]"
+                severity="success"
+                @click="open"
+              />
+            </template>
+          </ContactDialog>
         </div>
       </div>
     </div>
