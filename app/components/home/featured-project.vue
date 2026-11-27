@@ -19,5 +19,12 @@ import { FEATURED_PROJECTS } from "~/constants/projects";
         :description="item.description"
       />
     </div>
+    <UiButton
+      label="View Projects"
+      icon="icon-[tabler--arrow-up-right]"
+      icon-pos="right"
+      class="self-center text-black"
+      @click="navigateTo('projects')"
+    />
   </div>
 </template>
