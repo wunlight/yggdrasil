@@ -36,7 +36,7 @@ const shadowClass = computed(() => `nb-shadow-${props.severity}`);
         />
       </div>
     </div>
-    <div class="absolute right-3 top-3 z-1 hidden group-hover:flex gap-3">
+    <div class="absolute right-3 top-3 z-1 flex gap-3">
       <NuxtLink v-if="data.links.blog" :to="data.links.blog">
         <UiButton icon="icon-[tabler--book]" severity="success" size="sm" squared />
       </NuxtLink>
