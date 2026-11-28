@@ -8,4 +8,10 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwind()],
   },
+
+  app: {
+    head: {
+      title: "Rafael Wun | Frontend Engineer",
+    },
+  },
 });
